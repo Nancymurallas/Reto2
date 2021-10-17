@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MESSAGE</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">MESSAGE</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Client</a>
+            </li>
+            <li>
+                <a href="room.html">Room</a>
+            </li>
+            <li>
+                <a href="message.html">Message</a>
+            </li>
+            <li>
+                <a href="message.html">Recargar</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center; color: black;">INGRESO DATOS MESSAGE</h2>
+    <hr>
+    <table class="default" style="margin: 0 auto; color: black;">
+        <tr>
+            <th>ID</th>
+            <td><input type="text" id="idMessage"></td>
+        </tr>
+        <tr>
+            <th>MESSAGETEXT</th>
+            <td><input type="text" id="message"></td>
+        </tr>
+
+        <tr>
+            <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarMessage()"></th>
+            <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editarMessage()"></td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 style="text-align: center; color: black;">BUSCAR POR ID</h2>
+    <table class="default" style="margin: 0 auto; color: black;">
+        <tr>
+            <th>ID</th>
+            <td><input type="text" id="idMessage2"></td>
+        </tr>
+    </table>
+    <br>
+    <div id="resultadoMessage" style="text-align: center;"></div>
+    <br>
+    <div style="text-align: center;"><button onclick="buscarPorIDMessage($('#idMessage2'))">BUSCAR</button></div>
+    <hr>
+
+    <div style="text-align: center;"><button onclick="consultarMessage()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: black;">
+            <tbody id="miResultadoMessage">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+</body>
+
+</html>

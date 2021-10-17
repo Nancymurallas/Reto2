@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ROOM</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">ROOM</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Client</a>
+            </li>
+            <li>
+                <a href="room.html">Room</a>
+            </li>
+            <li>
+                <a href="message.html">Message</a>
+            </li>
+            <li>
+                <a href="room.html">Recargar</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center; color: black;">INGRESO DATOS ROOM</h2>
+    <hr>
+    <table class="default" style="margin: 0 auto; color: black;">
+        <tr>
+            <th>ID</th>
+            <td><input type="text" id="idBase"></td>
+        </tr>
+        <tr>
+            <th>ROOM</th>
+            <td><input type="text" id="roomBase"></td>
+        </tr>
+        <tr>
+            <th>STARS</th>
+            <td><input type="text" id="starsBase"></td>
+        </tr>
+        <tr>
+            <th>CATEGORY ID</th>
+            <td><input type="text" id="categoryBase"></td>
+        </tr>
+        <tr>
+            <th>DESCRIPTION</th>
+            <td><input type="text" id="descriptionBase"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardar()"></th>
+            <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editar()"></td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 style="text-align: center; color: black;">BUSCAR POR ID</h2>
+    <table class="default" style="margin: 0 auto; color: black;">
+        <tr>
+            <th>ID</th>
+            <td><input type="text" id="idBase2"></td>
+        </tr>
+    </table>
+    <br>
+    <div id="resultado" style="text-align: center;"></div>
+    <br>
+    <div style="text-align: center;"><button onclick="buscarPorID($('#idBase2'))">BUSCAR</button></div>
+    <hr>
+
+    <div style="text-align: center;"><button onclick="consultar()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: black;">
+            <tbody id="miResultado">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+</body>
+
+</html>
